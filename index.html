@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- LIENS POUR MES BOXICONS ET CERTAINS FONCTIONNALITES DES ICONES ET AUSSI LIEN POUR MON CDN TAILWIND -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body class="bg-white text-gray-900">
+
+    <nav id="navbar" class="p-5 bg-white shadow-md flex items-center justify-between fixed top-0 left-0 w-full z-50">
+        <div>
+            <a href="index.html" class="text-4xl font-semibold text-[#20c997] hover:text-black hover:scale-110 transition duration-300">F.BASSE</a>
+        </div>
+        
+        <!-- Menu Hamburger pour les petits écrans -->
+        <div class="lg:hidden">
+            <button id="hamburger" class="text-black focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    
+        <!-- Menu principal -->
+        <ul id="menu" class="lg:flex space-x-2 hidden lg:block">
+            <li><a href="index.html" class="text-lg text-black hover:bg-[#20c997] px-3 py-2 rounded active">Accueil</a></li>
+            <li><a href="#apropos" class="text-lg text-black hover:bg-[#20c997] px-3 py-2 rounded">A Propos</a></li>
+            <li><a href="#projet" class="text-lg text-black hover:bg-[#20c997] px-3 py-2 rounded">Projets</a></li>
+            <li><a href="#loisirs" class="text-lg text-black hover:bg-[#20c997] px-3 py-2 rounded">Loisirs</a></li>
+            <li><a href="#services" class="text-lg text-black hover:bg-[#20c997] px-3 py-2 rounded">Services</a></li>
+            <li>
+                <a href="images/mon_cv.pdf" download="mon_cv.pdf" class="text-lg text-black hover:bg-[#20c997] px-3 py-2 rounded">
+                  Télécharger CV
+                </a>
+              </li>
+              
+            <a href="#contact">
+                <button class="px-6 py-3 rounded-lg text-sm font-semibold bg-white text-black transition duration-300 border border-[#20c997] hover:bg-[#20c997] hover:text-white">
+                    Contact
+                </button>
+            </a>
+        </ul>
+    
+      
+    </nav>
+
+    <!-- Section Home -->
+    <section class="relative w-full min-h-screen flex items-center justify-start bg-[#20c997]">
+      
+        <div class="ml-10">
+            <img src="images/maphoto.jpg" alt="Françoise" class="w-[380px] h-[380px] rounded-full object-cover">
+        </div>
+       
+        <div class="ml-10 max-w-xl text-left text-white">
+            <h3 class="text-4xl font-semibold text-black">Salut</h3>
+            <h3 class="text-5xl font-bold mt-2 text-black">
+                Je suis <span class="text-white">Françoise </span>, <span id="typed-text" class="text-white">Développeuse</span>
+            </h3>
+            
+            <div class="flex gap-4 mt-6">
+                <a href="#competences">
+                    <button class="px-6 py-3 rounded-lg text-sm font-semibold bg-white text-black  transition duration-300 hover:bg-black hover:text-white  border border-[#20c997]">
+                        Mes compétences
+                    </button>
+                </a>
+                <a href="#experience">
+                    <button class="px-6 py-3 rounded-lg text-sm font-semibold bg-white text-black  transition duration-300 hover:bg-black hover:text-white  border border-[#20c997]">
+                        Expériences
+                    </button>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+    
+   <!-- A PROPOS DE MOI -->
+    <section class="w-full min-h-screen h-full flex items-center justify-center bg-white px-6 py-10" id="apropos">
+        <div class="flex flex-col md:flex-row items-start bg-white p-8 rounded-lg shadow-lg">
+        
+            <div class="md:mr-10 mb-6 md:mb-0">
+                <img src="images/maphoto.jpg" alt="Photo de profil" class="w-[350px] h-[350px] rounded-full object-cover" >
+            </div>
+    
+           
+            <div class="max-w-2xl">
+                <h2 class="text-3xl font-bold  text-[#20c997] hover:text-black hover:scale-110 transition duration-300">
+                    A PROPOS DE MOI
+                </h2>
+                <p class="mt-4 text-gray-700 text-justify">
+                    Je me nomme <span class="font-bold text-black">Françoise Basse</span>, actuellement étudiante en licence 2 en génie informatique à l'Univers Professionnelle (UNIPRO).
+                    Passionnée par les <span class="font-semibold text-black">TIC</span> et la création de sites web performants, j'aime concevoir des solutions web innovantes et adaptées aux besoins des utilisateurs.
+                    En outre, je suis fascinée par la <span class="font-semibold text-black">Data Science</span>, un domaine que j'aspire à explorer davantage pour repousser les frontières de l'innovation et de l'intelligence des données.
+                    J'ai aussi eu l'occasion de travailler sur des projets concrets, que ce soit en stage ou à travers des défis personnels.
+                </p>
+              
+                <ul class="mt-4 space-y-2 text-gray-600">
+                    <li><strong class="text-black">📍 Ville :</strong> Dakar, SN</li>
+                    <li><strong class="text-black">📧 Email :</strong> 
+                        <a href="mailto:bassefrancoise1@gmail.com" class="text-black hover:underline">
+                            bassefrancoise1@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            
+                <!-- Centre d'Intérêts -->
+                <h3 class="text-2xl font-bold mt-6  text-[#20c997] hover:text-black hover:scale-110 transition duration-300">
+                    Centre d'Intérêts
+                </h3>
+            
+                <div class="flex flex-wrap gap-6 mt-4">
+                    <div class="bg-gray-900 p-4 rounded-lg w-32 text-center hover:scale-110 transition duration-300">
+                        <i class="fas fa-book text-4xl text-[#20c997]"></i>
+                        <h6 class="mt-2  font-semibold text-[#20c997]">Lecture</h6>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg w-32 text-center hover:scale-110 transition duration-300">
+                        <i class="fas fa-lightbulb text-4xl text-[#20c997]"></i>
+                        <h6 class="mt-2  font-semibold text-[#20c997]">Culture Générale</h6>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg w-32 text-center hover:scale-110 transition duration-300">
+                        <i class="fas fa-gamepad text-4xl text-[#20c997]"></i>
+                        <h6 class="mt-2  font-semibold text-[#20c997]">Jeux Société</h6>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg w-32 text-center hover:scale-110 transition duration-300">
+                        <i class="fas fa-question text-4xl text-[#20c997]"></i>
+                        <h6 class="mt-2  font-semibold text-[#20c997]">Quizz</h6>
+                    </div>
+                </div>
+            </div>
+      </section>      
+    <!-- PROJETS -->
+  <section id="experience" class="bg-gray-100 py-12">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-teal-500 mb-10 hover:text-black hover:scale-110 transition duration-300">Expériences</h2>
+
+        <div class="space-y-8">
+            <!-- Dev It -->
+            <div class="flex flex-col md:flex-row items-center bg-white p-6 rounded-lg shadow-md">
+                <div class="md:w-3/4 p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Mars/Avril 2024</h3>
+                    <h4 class="text-lg font-medium text-teal-500"><a href="https://devitcentre.com/" target="_blank">Dev It</a></h4>
+                    <ul class="list-disc list-inside text-gray-700 mt-2">
+                        <li>Réalisation de sites web en HTML, CSS et WordPress.</li>
+                        <li>Gestion et utilisation des bases de données.</li>
+                        <li>Création de visuels avec Adobe Illustrator et Photoshop.</li>
+                        <li>Déploiement de sites web sur Panthéon.</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/4 flex justify-center">
+                    <a href="https://devitcentre.com/" target="_blank">
+                        <img src="images/dev-it-logo-removebg-preview.png" alt="Dev It" class="w-24 h-24 object-contain rounded-full shadow-md hover:shadow-lg transition">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Unipro -->
+            <div class="flex flex-col md:flex-row items-center bg-white p-6 rounded-lg shadow-md">
+                <div class="md:w-3/4 p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Unipro</h3>
+                    <ul class="list-disc list-inside text-gray-700 mt-2">
+                        <li>Développement de sites web en HTML et CSS.</li>
+                        <li>Gestion des bases de données.</li>
+                        <li>Ateliers de maintenance informatique.</li>
+                        <li>Déploiement de sites sur GitHub.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-12 bg-white">
+    <h2 id="projet" class="text-3xl font-bold text-center text-teal-500 mb-10 hover:text-black hover:scale-110 transition duration-300">Mes Projets</h2>
+    <p class="text-center text-justify mx-auto max-w-3xl">
+        Voici quelques projets, d'autres ont été mis en ligne par ailleurs. J'ai également réalisé des projets en Python en utilisant une interface graphique, ainsi qu'en Java pour la gestion d'une bibliothèque.
+    </p>
+    <br>
+
+    <div class="flex flex-wrap justify-center gap-6">
+        <div class="w-72 bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition">
+            <img src="images/resto.png" alt="Projet Restaurant" class="w-full h-44 object-cover">
+            <div class="p-4">
+                <span class="bg-green-300 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">Designer</span>
+                <p class="text-sm text-gray-700 mt-3">
+                    Ce projet a été réalisé lors de mon stage. J'ai créé un site web pour un restaurant en utilisant WordPress.
+                </p>
+                <a href="https://dev-bassisto.pantheonsite.io/" target="_blank" class="text-green-500 text-lg mt-3 block hover:text-green-600 transition">➜</a>
+            </div>
+        </div>
+        
+        <div class="w-72 bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition">
+            <img src="images/site.png" alt="Projet HTML" class="w-full h-44 object-cover">
+            <div class="p-4">
+                <span class="bg-green-300 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">Developper</span>
+                <p class="text-sm text-gray-700 mt-3">
+                    Projet réalisé dans le cadre d'un examen, en HTML et CSS dédié à la gestion des logements.
+                </p>
+                <a href="PROJETHTML/index.html" target="_blank" class="text-green-500 text-lg mt-3 block hover:text-green-600 transition">➜</a>
+            </div>
+        </div>
+
+        <div class="w-72 bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition">
+            <img src="images/calcul.jpeg" alt="Calculatrice JavaScript" class="w-full h-44 object-cover">
+            <div class="p-4">
+                <span class="bg-green-300 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">Marketer</span>
+                <p class="text-sm text-gray-700 mt-3">
+                    Une application de calcul permettant de déterminer un nombre premier et de calculer une factorielle.
+                </p>
+                <a href="https://bassefr.github.io/projetJAVASRIPTL1/" target="_blank" class="text-green-500 text-lg mt-3 block hover:text-green-600 transition">➜</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Mes Compétences -->
+<section class="skills py-12 bg-gray-50 text-center">
+    <h2 id="competences" class="text-3xl font-bold text-gray-800 mb-8 transition-transform duration-300 hover:text-green-500 hover:scale-110">
+        Mes Compétences
+    </h2>
+
+    <div class="relative flex items-center justify-center max-w-5xl mx-auto overflow-hidden">
+        <!-- Bouton précédent -->
+        <button class="prev-btn absolute left-0 bg-green-600 text-white rounded-full p-3 hover:bg-green-700 transition shadow-md z-10">
+            ❮
+        </button>
+
+        <!-- Conteneur des compétences -->
+        <div class="skills-wrapper overflow-hidden w-full">
+            <div class="skills-track flex gap-5 transition-transform duration-500">
+                <!-- HTML & CSS -->
+                <div class="skill-card bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0 transform hover:scale-105 transition">
+                    <img src="images/ht et css.jpeg" alt="HTML & CSS" class="w-full h-20 object-cover rounded-md">
+                    <p class="mt-2 font-medium text-gray-800">HTML & CSS ,tailwindcss</p>
+                    <i class='bx bxl-html5 text-green-500 text-3xl mt-2'></i>
+                </div>
+
+                <!-- Langage C -->
+                <div class="skill-card bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0 transform hover:scale-105 transition">
+                    <img src="images/c.jpeg" alt="Langage C" class="w-full h-20 object-cover rounded-md">
+                    <p class="mt-2 font-medium text-gray-800">Langage C</p>
+                    <i class='bx bxl-c-plus-plus text-green-500 text-3xl mt-2'></i>
+                </div>
+
+                <!-- Base de données -->
+                <div class="skill-card bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0 transform hover:scale-105 transition">
+                    <img src="images/bse.png" alt="Base de données" class="w-full h-20 object-cover rounded-md">
+                    <p class="mt-2 font-medium text-gray-800">Base de données</p>
+                    <i class='bx bxs-data text-green-500 text-3xl mt-2'></i>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="skill-card bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0 transform hover:scale-105 transition">
+                    <img src="images/js.png" alt="JavaScript" class="w-full h-20 object-cover rounded-md">
+                    <p class="mt-2 font-medium text-gray-800">JavaScript</p>
+                    <i class='bx bxl-javascript text-green-500 text-3xl mt-2'></i>
+                </div>
+
+                <!-- Java -->
+                <div class="skill-card bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0 transform hover:scale-105 transition">
+                    <img src="images/java.jpeg" alt="Java" class="w-full h-20 object-cover rounded-md">
+                    <p class="mt-2 font-medium text-gray-800">Java</p>
+                    <i class='bx bxl-java text-green-500 text-3xl mt-2'></i>
+                </div>
+
+                <!-- Python -->
+                <div class="skill-card bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0 transform hover:scale-105 transition">
+                    <img src="images/python.jpg" alt="Python" class="w-full h-20 object-cover rounded-md">
+                    <p class="mt-2 font-medium text-gray-800">Python</p>
+                    <i class='bx bxl-python text-green-500 text-3xl mt-2'></i>
+                </div>
+
+                <!-- PHP -->
+                <div class="skill-card bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0 transform hover:scale-105 transition">
+                    <img src="images/php.jpeg" alt="PHP" class="w-full h-20 object-cover rounded-md">
+                    <p class="mt-2 font-medium text-gray-800">PHP</p>
+                    <i class='bx bxl-php text-green-500 text-3xl mt-2'></i>
+                </div>
+
+                <!-- Photoshop -->
+                <div class="skill-card bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0 transform hover:scale-105 transition">
+                    <img src="images/design.png" alt="Photoshop" class="w-full h-20 object-cover rounded-md">
+                    <p class="mt-2 font-medium text-gray-800">Photoshop</p>
+                    <i class='bx bxl-adobe text-green-500 text-3xl mt-2'></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton suivant -->
+        <button class="next-btn absolute right-0 bg-green-600 text-white rounded-full p-3 hover:bg-green-700 transition shadow-md z-10">
+            ❯
+        </button>
+    </div>
+</section>
+<!-- SERVICES -->
+<section class="py-12 bg-white text-center">
+    <h2 id="services" class="text-3xl font-bold text-gray-800 mb-8 hover:text-teal-500 transform hover:scale-105 transition">
+        Mes Services
+    </h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105">
+            <i class='bx bx-world text-5xl text-teal-500 mb-4'></i>
+            <h3 class="text-xl font-semibold mb-2">Sites Web Responsives</h3>
+            <p class="text-gray-600">Création de sites web attractifs, modernes et adaptés à tous les supports.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105">
+            <i class='bx bx-cart text-5xl text-teal-500 mb-4'></i>
+            <h3 class="text-xl font-semibold mb-2">Site E-commerce</h3>
+            <p class="text-gray-600">Mise en place de boutiques en ligne performantes pour booster vos ventes.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105">
+            <i class='bx bx-paint text-5xl text-teal-500 mb-4'></i>
+            <h3 class="text-xl font-semibold mb-2">Affiches & Logos</h3>
+            <p class="text-gray-600">Création d'identités visuelles uniques pour vos projets et événements.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105">
+            <i class='bx bx-code-alt text-5xl text-teal-500 mb-4'></i>
+            <h3 class="text-xl font-semibold mb-2">Développement Web</h3>
+            <p class="text-gray-600">Solutions de développement web sur mesure pour tous vos besoins.</p>
+        </div>
+    </div>
+</section>
+<!-- Loisirs-->
+<section id="loisirs" class="py-12 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 hover:text-teal-500 transform hover:scale-105 transition">
+        Mes Loisirs
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-6 px-4">
+        <!-- Sport -->
+        <div class="relative w-80 overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105">
+            <img src="images/sport.jpg" alt="Sport" class="w-full h-60 object-cover rounded-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity hover:opacity-100">
+                <p class="text-white text-lg font-medium px-4"> Le sport est essentiel pour maintenir mon énergie et mon bien-être physique.</p>
+            </div>
+        </div>
+
+        <!-- Lecture -->
+        <div class="relative w-80 overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105">
+            <img src="images/Lecture.jpg" alt="Lecture" class="w-full h-60 object-cover rounded-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity hover:opacity-100">
+                <p class="text-white text-lg font-medium px-4"> Lire me permet de m'évader, d'apprendre et de nourrir mon imagination.</p>
+            </div>
+        </div>
+
+        <!-- Programmation -->
+        <div class="relative w-80 overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105">
+            <img src="images/programmation.avif" alt="Programme" class="w-full h-60 object-cover rounded-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity hover:opacity-100">
+                <p class="text-white text-lg font-medium px-4">La programmation est ma passion, un défi intellectuel stimulant au quotidien.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contacts -->
+<section id="contact" class="py-12 bg-gray-50">
+    <h1 class="text-3xl font-bold text-center text-teal-500 mb-10 hover:text-black hover:scale-110 transition duration-300">Contactez-moi</h1>
+    <div class="max-w-lg mx-auto bg-white p-8 shadow-md rounded-lg">
+        <form action="" method="get" class="space-y-4">
+            <div>
+                <input type="text" id="nom" name="nom" placeholder="Nom" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#20c997]">
+            </div>
+            <div>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#20c997]">
+            </div>
+            <div>
+                <input type="email" id="email" name="email" placeholder="E-mail" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#20c997]">
+            </div>
+            <div>
+                <textarea id="message" name="message" rows="6" placeholder="Message" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#20c997]"></textarea>
+            </div>
+            <button type="submit" class="px-6 py-3 rounded-lg text-sm font-semibold bg-white text-black transition duration-300 border border-[#20c997] hover:bg-[#20c997] hover:text-white">
+                Envoyer
+            </button>
+            
+        </form>
+    </div>
+</section>
+<!-- mon Footer -->
+<footer class="bg-[#20c997] text-white py-10 px-8 sm:px-12 md:px-16 lg:px-24">
+    <div class="footer-content flex flex-wrap justify-between max-w-screen-xl mx-auto">
+        <!-- Première colonne - Liens rapides -->
+        <div class="footer-col flex-1 min-w-[250px] mb-6 sm:mb-0">
+            <h4 class="text-xl font-semibold mb-4">Liens rapides</h4>
+            <ul class="space-y-2">
+                <li><a href="index.html" class="text-white hover:text-black transition duration-300">Accueil</a></li>
+                <li><a href="#apropos" class="text-white hover:text-black  transition duration-300">A Propos</a></li>
+                <li><a href="#loisirs" class="text-white hover:text-black  transition duration-300">Loisirs</a></li>
+                <li><a href="#projet" class="text-white hover:text-black  transition duration-300">Projets</a></li>
+                <li><a href="#services" class="text-white hover:text-black  transition duration-300">Services</a></li>
+                <li><a  href="images/mon_cv.pdf" download="mon_cv.pdf" class="text-white hover:text-black  transition duration-300">Mon CV</a></li>
+            </ul>
+        </div>
+        
+        <!-- Deuxième colonne - Contact -->
+        <div class="footer-col flex-1 min-w-[250px] mb-6 sm:mb-0">
+            <h4 class="text-xl font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-white hover:text-black  transition duration-300">Adresse: Sénégal, Dakar</a></li>
+                <li><a href="#" class="text-white hover:text-black  transition duration-300">Téléphone: (+221) 77 488 16 38</a></li>
+                <li><a href="#" class="text-white hover:text-black  transition duration-300">E-mail: bassefrancoise1@gmail.com</a></li> 
+            </ul>
+        </div>
+        
+        <!-- Troisième colonne - Réseaux sociaux -->
+        <div class="footer-col flex-1 min-w-[250px] mb-6 sm:mb-0">
+            <h4 class="text-xl font-semibold mb-4">Liens vers mes réseaux</h4>
+            <div class="social-links flex space-x-4">
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="bg-[#0077b5] text-white w-10 h-10 flex items-center justify-center rounded-full transition duration-300 hover:bg-white hover:text-[#0077b5]">
+                    <i class='bx bxl-linkedin-square'></i>
+                </a>
+                <a href="https://github.com/" target="_blank" class="bg-[#181717] text-white w-10 h-10 flex items-center justify-center rounded-full transition duration-300 hover:bg-white hover:text-[#181717]">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="bg-[#F56040] text-white w-10 h-10 flex items-center justify-center rounded-full transition duration-300 hover:bg-white hover:text-[#F56040]">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <p class="text-center text-sm mt-8">&copy; 2025 Portfolio . Droits réservés.</p>
+</footer>
+
+
+
+
+<!-- Import des icônes Boxicons -->
+<script src="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/dist/boxicons.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
